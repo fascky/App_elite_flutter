@@ -3,8 +3,8 @@ import '../widgets/header.dart';
 import '../widgets/category_card.dart';
 import '../widgets/bottom_nav_bar.dart';
 
-class _UserGreeting extends StatelessWidget {
-  const _UserGreeting();
+class Inico extends StatelessWidget {
+  const Inico({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,13 +40,14 @@ class _UserGreeting extends StatelessWidget {
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
           const Header(),
-          const _UserGreeting(),
+          const Inico(),
           Expanded(
             child: ListView(
               padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -85,7 +86,7 @@ class _ActivitiesCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 110, 
+      height: 110,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: const [
@@ -129,7 +130,7 @@ class _TabsSection extends StatelessWidget {
             labelStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             tabs: [Tab(text: 'Ingresantes'), Tab(text: 'Profesores')],
           ),
-          SizedBox(height: 30), // Agrega espacio entre las pestañas y el contenido
+          SizedBox(height: 30),
           SizedBox(
             height: 380,
             child: TabBarView(
